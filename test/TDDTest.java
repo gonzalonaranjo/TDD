@@ -61,4 +61,9 @@ public class TDDTest {
 		tdd.put("Apellidos", "Fernández");
 		assertEquals(false, tdd.remove("Nombre"));
 	}
+	@Test
+	public void devuelveCeroSiLaTablaEstaVacia(){
+		assertEquals(0, tdd.size());
+		
+	}
 }
