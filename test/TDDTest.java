@@ -46,4 +46,9 @@ public class TDDTest {
 		assertEquals(true, tdd.containsKey("Nombre"));
 		
 	}
+	@Test
+	public void devuelveFalseSiNoExisteClave(){
+		tdd.put("Nombre", "Juan");
+		assertEquals(false, tdd.containsKey("Apellidos"));	
+	}
 }
