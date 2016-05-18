@@ -1,4 +1,4 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +14,15 @@ public class TDDTest {
 	}
 	@Test
 	public void addClaveReturnsValue(){
-		tdd.put("Nombre", "Lus");
+		tdd.put("Nombre", "Luis");
 		assertEquals("Luis" , tdd.get("Nombre"));
+	}
+	@Test
+	public void addClaveDosValoresModificaValor(){
+		tdd.put("Nombre", "Luis");
+		assertEquals("Luis", tdd.get("Nombre"));
+		tdd.put("Nombre", "Pedro");
+		assertEquals("Pedro", tdd.get("Nombre"));
+		tdd.put("Apellido", "Prueba");
 	}
 }
