@@ -66,4 +66,10 @@ public class TDDTest {
 		assertEquals(0, tdd.size());
 		
 	}
+	@Test
+	public void devuelveUnoSiHayUnElemento(){
+		tdd.put("Apellidos", "Rondón");
+		assertEquals(1, tdd.size());
+		
+	}
 }
