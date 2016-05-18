@@ -35,4 +35,13 @@ public class TDD {
 		
 		return devolver;
 	}
+	/*Devuelve TRUE si la clave existe y FALSE en caso contrario.*/
+	public boolean containsKey(String clave){
+		boolean v = false;
+		
+		if(tabla.containsKey(clave)) v = true;
+		else v = false;
+		
+		return v;
+	}
 }
