@@ -1,7 +1,10 @@
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.internal.runners.statements.ExpectException;
+import org.junit.rules.ExpectedException;
 
 
 public class TDDTest {
@@ -23,6 +26,11 @@ public class TDDTest {
 		assertEquals("Luis", tdd.get("Nombre"));
 		tdd.put("Nombre", "Pedro");
 		assertEquals("Pedro", tdd.get("Nombre"));
-		tdd.put("Apellido", "Prueba");
+	}
+	
+	@Test(expected = NoExisteClaveAsociada.class)
+	public void addClaveDevuelveExcepcion(){
+		tdd.put("Nombre", "Juan");
+		tdd.get("Apellido");
 	}
 }

@@ -22,6 +22,7 @@ public class TDD {
 		}
 		else{
 			String mensaje = String.join(", ", tabla.toString());
+			System.out.println(mensaje);
 			throw new NoExisteClaveAsociada(mensaje);
 		}
 		return devolver;
