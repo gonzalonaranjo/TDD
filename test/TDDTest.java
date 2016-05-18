@@ -51,4 +51,10 @@ public class TDDTest {
 		tdd.put("Nombre", "Juan");
 		assertEquals(false, tdd.containsKey("Apellidos"));	
 	}
+	@Test
+	public void devuelveTrueSiBorraClave(){
+		tdd.put("Nombre", "Emilio");
+		assertEquals(true, tdd.remove("Nombre"));
+		
+	}
 }

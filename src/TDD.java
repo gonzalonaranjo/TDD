@@ -44,4 +44,16 @@ public class TDD {
 		
 		return v;
 	}
+	/* Borra el par asociado a la clave, devolviendo verdadero o falso 
+	 * según la operación haya tenido éxito o no.*/
+	public boolean remove(String clave){
+		boolean v = false;
+		
+		if(tabla.containsKey(clave)){
+			tabla.remove(clave);
+			v = true;
+		}else{v = false;}
+		
+		return v;
+	}
 }
