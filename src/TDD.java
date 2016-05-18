@@ -22,9 +22,17 @@ public class TDD {
 		}
 		else{
 			String mensaje = String.join(", ", tabla.toString());
-			System.out.println(mensaje);
 			throw new NoExisteClaveAsociada(mensaje);
 		}
+		return devolver;
+	}
+	/*Busca la clave en la tabla y devuelve el valor asociado; si la clave no existe 
+	 * devuelve valorPorDefecto.*/
+	public String getOrElse(String clave, String valorPorDefecto){
+		String devolver = valorPorDefecto;
+		
+		if(tabla.containsKey(clave)) devolver = tabla.get(clave);
+		
 		return devolver;
 	}
 }

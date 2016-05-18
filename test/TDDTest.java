@@ -33,4 +33,11 @@ public class TDDTest {
 		tdd.put("Nombre", "Juan");
 		tdd.get("Apellido");
 	}
+	@Test
+	public void addClaveDevuelveValorSiNoExisteDevuelveValorPorDefecto(){
+		tdd.put("Nombre", "Juan");
+		assertEquals("Juan", tdd.getOrElse("Nombre", "0"));
+		assertEquals("0", tdd.getOrElse("Apellido", "0"));
+		
+	}
 }
