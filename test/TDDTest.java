@@ -14,7 +14,7 @@ public class TDDTest {
 	}
 	@Test
 	public void addClaveReturnsValue(){
-		tdd.put("Nombre", "Luis");
+		tdd.put("Nombre", "Lus");
 		assertEquals("Luis" , tdd.get("Nombre"));
 	}
 }
