@@ -72,4 +72,11 @@ public class TDDTest {
 		assertEquals(1, tdd.size());
 		
 	}
+	@Test
+	public void devuelveTresSiHayTresElementos(){
+		tdd.put("Nombre", "Salomón");
+		tdd.put("Apellido", "Rondón");
+		tdd.put("Edad", "27");
+		assertEquals(3, tdd.size());
+	}
 }
